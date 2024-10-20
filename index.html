@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
     <meta charset="UTF-8">
 <style>
@@ -424,6 +426,71 @@
     var epveletlen = ""
     var eppenutalando = 0
     var eppnem = 0
+
+
+
+
+
+    const githubToken = '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'; 
+    const repoOwner = 'kalteneckera'; 
+    const repoName = 'PBP'; 
+
+    function uploadFileToGitHub(content, filePath) { 
+        const url = `https://api.github.com/repos/${repoOwner}/${repoName}/contents/${filePath}`; 
+        const encodedContent = btoa(content); 
+        fetch(url, { 
+            method: 'PUT', 
+            headers: { 
+                'Authorization': `token ${githubToken}`, 
+                'Content-Type': 'application/json' 
+            }, 
+            body: JSON.stringify({ 
+                message: 'Add or update file', 
+                content: encodedContent }) 
+            }).then(response => response.json()).then(data => { 
+                console.log(data); 
+            }).catch(error => { console.error('Error:', error); 
+
+        }); 
+    } 
+    function downloadFileFromGitHub(filePath) { 
+        const url = `https://api.github.com/repos/${repoOwner}/${repoName}/contents/${filePath}`; 
+        fetch(url, { 
+            headers: { 
+                'Authorization': `token ${githubToken}` } 
+            }).then(response => response.json()).then(data => { 
+                const content = atob(data.content); 
+                //console.log('File content:', content);
+                return content
+            }).catch(error => { 
+                console.error('Error:', error); 
+        }); 
+    }
+    function bnev() {
+        var sfelh = JSON.stringify(felh)
+        var sfelhsz = JSON.stringify(felhsz)
+        var scsekk = JSON.stringify(csekk)
+        var scsekksz = JSON.stringify(csekksz)
+        var sadminjel = JSON.stringify(adminjel)
+        uploadFileToGitHub(sfelh, "sfelh.json")
+        uploadFileToGitHub(sfelhsz, "sfelhsz.json")
+        uploadFileToGitHub(scsekk, "scsekk.json")
+        uploadFileToGitHub(scsekksz, "scsekk.json")
+        uploadFileToGitHub(sadminjel, "sadminjel.json")
+    }
+    function load() {
+        felh = JSON.parse(downloadFileFromGitHub("sfelh.json"))
+        felhsz = JSON.parse(downloadFileFromGitHub("sfelhsz.json"))
+        csekk = JSON.parse(downloadFileFromGitHub("scsekk.json"))
+        csekksz = JSON.parse(downloadFileFromGitHub("scsekksz.json"))
+        adminjel = JSON.parse(downloadFileFromGitHub("sadminjel.json"))
+    }
+
+
+
+
+
+    load()
     function veletlen(max) {
         return Math.ceil(Math.random() * max)
     }
@@ -781,5 +848,11 @@
     }
     
     kezd()
+    
+
+
+
+
+
     
 </script>
