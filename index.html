@@ -480,6 +480,7 @@
         uploadFileToGitHub(scsekksz, "scsekk.json")
         uploadFileToGitHub(sadminjel, "sadminjel.json")
         uploadFileToGitHub(sloadf, "sloadf.json")
+        alert("Sikeres mentés!")
     }
     function load() {
         felh = JSON.parse(downloadFileFromGitHub("sfelh.json"))
@@ -488,6 +489,7 @@
         csekksz = JSON.parse(downloadFileFromGitHub("scsekksz.json"))
         adminjel = JSON.parse(downloadFileFromGitHub("sadminjel.json"))
         loadf = JSON.parse(downloadFileFromGitHub("sloadf.json"))
+        alert("Adatok betöltve.")
     }
 
 
