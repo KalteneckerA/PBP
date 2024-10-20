@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
     <meta charset="UTF-8">
 <style>
@@ -412,7 +410,6 @@
     var csekk = []
     var csekksz = 0
     var adminjel = "19450430"
-    var loadf = "true"
 
     var i = 0
     var j = 0
@@ -420,86 +417,13 @@
     var bejelifel = ""
     var bkezd = ('<button id="bk" onclick="kezd()">Kezdőlap</button>')
     var btarca = ('<button id ="bt" onclick="tarca()">Tárca</button>')
-    var bnev = ('<button id="bnev" onclick="bload()">PBP</button>')
+    var bnev = ('<button id="bnev" onclick="bnev()">PBP</button>')
     var bvar = ('<button id="bvar" onclick="bvarf()">Várhatóak</button>')
-    var talca = ('<div id="talca"><button id="bk" onclick="kezd()">Kezdőlap</button><button id ="bt" onclick="tarca()">Tárca</button><button id="bnev" onclick="bload()">PBP</button><button id="bvar" onclick="bvarf()">Várhatóak</button></div><button onclick="download(felh,"felh")"">letölt</button>')
+    var talca = ('<div id="talca"><button id="bk" onclick="kezd()">Kezdőlap</button><button id ="bt" onclick="tarca()">Tárca</button><button id="bnev" onclick="bnev()">PBP</button><button id="bvar" onclick="bvarf()">Várhatóak</button></div><button onclick="download(felh,"felh")"">letölt</button>')
     var kvar = ('<button id="kvar" onclick="kijel()">KIJELENTKEZÉS</button>')
     var epveletlen = ""
     var eppenutalando = 0
     var eppnem = 0
-
-
-
-
-
-    const githubToken = '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'; 
-    const repoOwner = 'kalteneckera'; 
-    const repoName = 'PBP'; 
-
-    function uploadFileToGitHub(content, filePath) { 
-        const url = `https://api.github.com/repos/${repoOwner}/${repoName}/contents/${filePath}`; 
-        const encodedContent = btoa(content); 
-        fetch(url, { 
-            method: 'PUT', 
-            headers: { 
-                'Authorization': `token ${githubToken}`, 
-                'Content-Type': 'application/json' 
-            }, 
-            body: JSON.stringify({ 
-                message: 'Add or update file', 
-                content: encodedContent }) 
-            }).then(response => response.json()).then(data => { 
-                console.log(data); 
-            }).catch(error => { console.error('Error:', error); 
-
-        }); 
-    } 
-    function downloadFileFromGitHub(filePath) { 
-        const url = `https://api.github.com/repos/${repoOwner}/${repoName}/contents/${filePath}`; 
-        fetch(url, { 
-            headers: { 
-                'Authorization': `token ${githubToken}` } 
-            }).then(response => response.json()).then(data => { 
-                const content = atob(data.content); 
-                //console.log('File content:', content);
-                return content
-            }).catch(error => { 
-                console.error('Error:', error); 
-        }); 
-    }
-    function bload() {
-        var sfelh = JSON.stringify(felh)
-        var sfelhsz = JSON.stringify(felhsz)
-        var scsekk = JSON.stringify(csekk)
-        var scsekksz = JSON.stringify(csekksz)
-        var sadminjel = JSON.stringify(adminjel)
-        var sloadf = JSON.stringify(loadf)
-        uploadFileToGitHub(sfelh, "sfelh.json")
-        uploadFileToGitHub(sfelhsz, "sfelhsz.json")
-        uploadFileToGitHub(scsekk, "scsekk.json")
-        uploadFileToGitHub(scsekksz, "scsekk.json")
-        uploadFileToGitHub(sadminjel, "sadminjel.json")
-        uploadFileToGitHub(sloadf, "sloadf.json")
-        alert("Sikeres mentés!")
-    }
-    function load() {
-        felh = JSON.parse(downloadFileFromGitHub("sfelh.json"))
-        felhsz = JSON.parse(downloadFileFromGitHub("sfelhsz.json"))
-        csekk = JSON.parse(downloadFileFromGitHub("scsekk.json"))
-        csekksz = JSON.parse(downloadFileFromGitHub("scsekksz.json"))
-        adminjel = JSON.parse(downloadFileFromGitHub("sadminjel.json"))
-        loadf = JSON.parse(downloadFileFromGitHub("sloadf.json"))
-        alert("Adatok betöltve.")
-    }
-
-
-
-
-    if(loadf == "true") {loadf = "false"}
-    else if(loadf == "false") {load()}
-    
-
-
     function veletlen(max) {
         return Math.ceil(Math.random() * max)
     }
@@ -857,11 +781,5 @@
     }
     
     kezd()
-    
-
-
-
-
-
     
 </script>
