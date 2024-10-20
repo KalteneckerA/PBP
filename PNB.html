@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KNB</title>
+</head>
+<style>
+    #talca{position: absolute;
+        width: 100%;
+        height: 10%;
+        background-color: rgb(25, 123, 25);
+    }
+    #bk{position: absolute;
+        border: none;
+        border-radius: 7%;
+        color: white;
+        background-color: rgb(25, 123, 25);
+        left: 10%;
+        top: 30%;
+        width: 30%;}
+    #bk:hover{
+        transition: all 2s;
+        background-color: rgb(3, 45, 9);
+    }
+    #bt{position: absolute;
+        border: none;
+        border-radius: 7%;
+        color: white;
+        background-color: rgb(25, 123, 25);
+        left: 40%;
+        top: 30%;
+        width: 30%;}
+    #bt:hover{
+        transition: all 2s;
+        background-color: rgb(3, 45, 9);
+    }
+    #bvar{position: absolute;
+        border: none;
+        border-radius: 7%;
+        color: white;
+        background-color: rgb(25, 123, 25);
+        left: 70%;
+        top: 30%;
+        width: 30%;}
+    #bvar:hover{
+        transition: all 2s;
+        background-color: rgb(3, 45, 9);
+    }
+    #bnev{position: absolute;
+        border: none;
+        color: white;
+        width: 10%;
+        top: 10%;
+        background-color: rgb(25, 123, 25);
+        font-size: 120%;}
+    .cim{position: absolute;
+        top: 15%;
+        left: 3%;
+        font-size: 40px;}
+    .sor1{position: absolute;
+        top: 30%;
+        left: 5%;}
+    #bejel{position: absolute;
+        color: white;
+        border: 3px solid rgb(25, 123, 25);
+        background-color: rgb(25, 123, 25);
+        left: 20%;
+        top: 40%;
+        width: 60%;
+        height: 10%;
+        font-size: 20px;}
+    #kerp{position: absolute;
+        top: 50%;
+        left: 21%}
+    #admin{position: absolute;
+        color: white;
+        border: 3px solid rgb(25, 123, 25);
+        background-color: rgb(25, 123, 25);
+        left: 25%;
+        top: 65%;
+        width: 20%;
+        height: 7%;}
+    #ujfi{position: absolute;
+        border: none;
+        background-color: white;
+        color: blue;
+        top: 60%;
+        left: 21%;}
+    .p1{position: absolute;
+        top: 15%;
+        left: 25%;}
+    .nevi{position: absolute;
+        top: 25%;
+        left: 25%;
+        width: 50%;
+        height: 7%;}
+    .p2{position: absolute;
+        top: 42%;
+        left: 25%;}
+    .pbh{position: absolute;
+        top: 35%;
+        left: 25%;
+        width: 50%;
+        height: 7%;}
+    #bejelje{position: absolute;
+        top: 52%;
+        left: 25%;
+        width: 50%;
+        height: 7%;}
+    .cim2{position: absolute;
+        top: 40%;
+        left: 3%;
+        font-size: 40px;}
+    .sor2{position: absolute;
+        top: 55%;
+        left: 5%;}
+    .mail{position: absolute;
+        top: 45%;
+        left: 25%;
+        width: 50%;
+        height: 7%;}
+    #p3{position: absolute;
+        top: 55%;
+        left: 25%;}
+    #mail2{position: absolute;
+        top: 65%;
+        left: 25%;
+        width: 50%;
+        height: 7%;}
+    #p4{position: absolute;
+        top: 75%;
+        left: 25%;}
+    #kod{position: absolute;
+        top: 85%;
+        left: 25%;
+        width: 50%;
+        height: 7%;}
+    #p5{position: absolute;
+        top: 95%;
+        left: 25%;}
+    #kod2{position: absolute;
+        top: 105%;
+        left: 25%;
+        width: 50%;
+        height: 7%;}
+    #tolt{position: absolute;
+        border: 3px solid rgb(25, 123, 25);
+        background-color: rgb(25, 123, 25);
+        color: white;
+        top: 122%;
+        left: 25%;
+        width: 50%;
+        height: 7%;}
+    #kove{position: absolute;
+        border: 3px solid rgb(25, 123, 25);
+        background-color: rgb(25, 123, 25);
+        color: white;
+        left: 55%;
+        top: 65%;
+        width: 20%;
+        height: 7%;}
+    #kp2{position: absolute;
+        top: 35%;
+        left: 25%;}
+    #kp3{position: absolute;
+        top: 80%;
+        left: 25%;}
+    #kp4{position: absolute;
+        top: 45%;
+        left: 25%;}
+    #felv{position: absolute;
+        border: 3px solid rgb(25, 123, 25);
+        background-color: rgb(25, 123, 25);
+        color: white;
+        left: 25%;
+        top: 55%;
+        width: 50%;
+        height: 7%;}
+    #utal{position: absolute;
+        border: 3px solid rgb(25, 123, 25);
+        background-color: rgb(25, 123, 25);
+        color: white;
+        left: 25%;
+        top: 70%;
+        width: 50%;
+        height: 7%;}
+    #b2{position: absolute;
+        top: 35%;
+        left: 25%;
+        width: 50%;
+        height: 7%;}
+    #b3{position: absolute;
+        top: 45%;
+        left: 25%;}
+    #b4{position: absolute;
+        top: 55%;
+        left: 25%;
+        width: 50%;
+        height: 7%;}
+    #b5{position: absolute;
+        top: 65%;
+        left: 25%;}
+    #b6{position: absolute;
+        top: 75%;
+        left: 25%;
+        width: 50%;
+        height: 7%;}
+    #utalg{position: absolute;
+        border: 3px solid rgb(25, 123, 25);
+        background-color: rgb(25, 123, 25);
+        color: white;
+        left: 25%;
+        top: 85%;
+        width: 50%;
+        height: 7%;}
+    #f2{position: absolute;
+        top: 35%;
+        left: 25%;
+        width: 50%;
+        height: 7%;}
+    #f3{position: absolute;
+        border: 3px solid rgb(25, 123, 25);
+        background-color: rgb(25, 123, 25);
+        color: white;
+        left: 25%;
+        top: 45%;
+        width: 50%;
+        height: 7%;}
+    #f4{position: absolute;
+        border: 3px solid rgb(25, 123, 25);
+        background-color: rgb(25, 123, 25);
+        color: white;
+        left: 25%;
+        top: 65%;
+        width: 50%;
+        height: 7%;}
+    #r1{position: absolute;
+        top: 100px;
+        left: 25px;}
+    #r2{position: absolute;
+        top: 120px;
+        left: 25px;}
+    #r3{position: absolute;
+        top: 120px;
+        left: 200px;}
+
+    #r4{position: absolute;
+        top: 150px;
+        left: 25px;}
+    #r5{position: absolute;
+        top: 165px;
+        left: 80px;
+        width: 100px;}
+    #r6{position: absolute;
+        top: 150px;
+        left: 200px;}
+    #r7{position: absolute;
+        top: 165px;
+        left: 270px;}
+
+    #r8{position: absolute;
+        top: 180px;
+        left: 25px;}
+    #r9{position: absolute;
+        top: 180px;
+        left: 210px;}
+    #r10{position: absolute;
+        top: 195px;
+        left: 270px;}
+    #r11{position: absolute;
+        border: 3px solid rgb(25, 123, 25);
+        background-color: rgb(25, 123, 25);
+        color: white;
+        left: 25px;
+        top: 230px;
+        width: 50%;
+        height: 7%;}
+    #t1{position: absolute;
+        top: 20%;
+        left: 25%;}
+    #t2{position: absolute;
+        top: 30%;
+        left: 25%;
+        width: 50%;
+        height: 7%;}
+    #t3{position: absolute;
+        border: 3px solid rgb(25, 123, 25);
+        background-color: rgb(25, 123, 25);
+        color: white;
+        left: 25%;
+        top: 40%;
+        height: 7%;
+        width: 50%;}
+    #mtk{position: absolute;
+        border: 3px solid rgb(25, 123, 25);
+        background-color: rgb(25, 123, 25);
+        color: white;
+        left: 25%;
+        top: 30%;
+        height: 7%;
+        width: 50%;}
+    #szke{position: absolute;
+        border: 3px solid rgb(25, 123, 25);
+        background-color: rgb(25, 123, 25);
+        color: white;
+        left: 25%;
+        top: 40%;
+        height: 7%;
+        width: 50%;}
+    #utbk{position: absolute;
+        border: 3px solid rgb(25, 123, 25);
+        background-color: rgb(25, 123, 25);
+        color: white;
+        left: 25%;
+        top: 20%;
+        height: 7%;
+        width: 50%;}
+    #cskkb{position: absolute;
+        border: 3px solid rgb(25, 123, 25);
+        background-color: rgb(25, 123, 25);
+        color: white;
+        left: 25%;
+        top: 50%;
+        height: 7%;
+        width: 50%;}
+    #kvar{position: absolute;
+        border: 3px solid rgb(25, 123, 25);
+        background-color: rgb(25, 123, 25);
+        color: white;
+        left: 80%;
+        top: 10%;
+        height: 5%;
+        width: 20%;}
+</style>
+<body id="body">
+    <div id="alap"></div>
+</body>
+<script>
+        loadData("felh")
+        loadData("felhsz")
+        loadData("csekk")
+        loadData("csekksz")
+
+    var felh = []
+    var felhsz = 0
+    var csekk = []
+    var csekksz = 0
+
+    var i = 0
+    var j = 0
+    var bejeli = false
+    var bejelifel = ""
+    var bkezd = ('<button id="bk" onclick="kezd()">Kezdőlap</button>')
+    var btarca = ('<button id ="bt" onclick="tarca()">Tárca</button>')
+    var bnev = ('<button id="bnev" onclick="bnev()">PNB</button>')
+    var bvar = ('<button id="bvar" onclick="bvarf()">Várhatóak</button>')
+    var talca = ('<div id="talca"><button id="bk" onclick="kezd()">Kezdőlap</button><button id ="bt" onclick="tarca()">Tárca</button><button id="bnev" onclick="bnev()">PNB</button><button id="bvar" onclick="bvarf()">Várhatóak</button></div>')
+    var kvar = ('<button id="kvar" onclick="kijel()">KIJELENTKEZÉS</button>')
+    var epveletlen = ""
+    var eppenutalando = 0
+    function veletlen(max) {
+        return Math.ceil(Math.random() * max)
+    }
+    function kezd() {
+        var p1 = ('<p class="cim">Online PB!</p>')
+        var p2 = ('<p class="sor1">Jelentkezz be és az PNB-n keresztűl vidd át a Pályi bankódat a telefonodra. Utalj a barátaidnak és ha akarod itt kapod a fizetésed.</p>')
+        var p3 = ('<p class="cim2">Fontos</p>')
+        var p4 = ('<p class="sor2">Ahoz, hogy elmentsük a módosításainkat el kell menteni a weblapot. Ezt úgy tehetjük meg, hogy a bal felső sarokban a PNB gombra kattintunk. Ha sikerrel jártunk, jelezni fog. Illetve aki most regisztrál annak 3Pb kezdés jár.</p>')
+        document.getElementById("body").innerHTML = talca+p1+p2+p3+p4
+    }
+    function bvarf() {
+        var t1 = ('<p class="cim">Várhatóak!</p>')
+        var t2 = ('<p class="sor1">Jelenleg az egész fejlesztés alatt van.</p>')
+        document.getElementById("body").innerHTML = talca+t1+t2
+    }
+    function tarca() {
+        if(bejeli == false) {
+            var p3 = ('<p class="cim">Jelentkezz be!</p>')
+            var b1 = ('<button id="bejel" onclick="bejel()">BEJELENTKEZÉS</button>')
+            var p4 = ('<p id="kerp">Nincs fiókod? Készits egy újjat!:</p>')
+            var b2 = ('<button id="ujfi" onclick="keszit()">Új fiók készítése.</button>')
+            document.getElementById("body").innerHTML = talca+p3+b1+p4+b2
+        }
+        else{
+            if(bejeli == true && bejelifel == "admin") {beadmin()}
+            else{
+                betarca()
+            }
+        }
+       
+    }
+    function kijel() {
+        bejeli = false
+        bejelifel = ""
+        tarca()
+    }
+
+//bejelentkezés
+    function bejel() {
+        var pa1 = ('<p class="p1">Név / Kártya kód</p>')
+        var ip6 = ('<input class="nevi" id="bejelnev"></input>')
+        var pa2 = ('<p class="p2">Jelszó</p>')
+        var ip7 = ('<input id="bejelje" type="password"></input>')
+        var b4 = ('<button id="kove" onclick="kove()">Következő</button>')
+        var b5 = ('<button id="admin" onclick="adminbl()">Admin belépés</button>')
+        document.getElementById("body").innerHTML = talca+pa1+ip6+pa2+ip7+b4+b5
+    }
+    function kove() {
+        var nev = document.getElementById("bejelnev").value
+        var szojel = parseFloat(document.getElementById("bejelje").value)
+        i = 0
+        while(nev != felh[i].name) {
+            i++
+        }
+        
+        if(nev == felh[i].name) {
+            if(szojel == felh[i].password/felh[i].psc) {
+                bejeli = true
+                bejelifel = felh[i].name
+                betarca()
+            }
+            else{alert("Hibás jelszó!")}
+        }
+        else{
+            i = 0
+            while(parseFloat(nev) != felh[i].code && i < felhsz) {
+                i++
+            }
+            if(parseFloat(nev) == felh[i].code) {
+                if(szojel == felh[i].password/felh[i].psc) {
+                        bejeli = true
+                        bejelifel = felh[i].name
+                        betarca()
+                }
+                else{alert("Hibás jelszó!")}
+            }
+            else{
+                alert("HIBA VAN A RENDSZERBEN.\nVALAMIT NAGYON BENÉZTÉL, VAGY ÉN!!!")
+            }
+        }
+    }
+    function adminbl() {
+        var t = ('<p id="t1">Add meg a PNB admin kódot!</p><input id="t2" type="password"></input><button id="t3" onclick="knbadmin()">Következő</button>')
+        document.getElementById("body").innerHTML = talca+t
+    }
+
+//bejelentkezett
+    function betarca() {
+        i = 0
+        while(bejelifel != felh[i].name) {
+            i++
+        }
+        if(bejelifel == felh[i].name) {
+            var k1 = ('<p class="nevi">A kártya kódod: #'+felh[i].code+'</p>')
+            var k2 = ('<p id="kp2">A pénz összeged: '+felh[i].money+'PB'+'</p>')
+            var k6 = ('<p id="kp4">A pénz összeged: '+felh[i].money*2+'JG'+'</p>')
+            var k3 = ('<button id="felv" onclick="felv()">Pénz felvétel</button>')
+            var k4 = ('<button id="utal" onclick="utal()">Utalás</button>')
+            var k5 = ('<p id="kp3">Tranzakciók:   '+felh[i].transactions+'</p>')
+            document.getElementById("body").innerHTML = talca+k1+k2+k6+k3+k4+k5+kvar
+        }
+    }
+    function knbadmin() {
+        var hjk = parseFloat(document.getElementById("t2").value)
+        if(hjk == 20231012) {
+            beadmin()
+        }
+        else{alert("A román szörös talpú néger cigány anyád")}
+    }
+    function beadmin() {
+        bejeli = true
+        bejelifel = "admin"
+        var o1 = ('<button id="utbk" onclick="utala()">Utalás</button><button id="mtk" onclick="mtk()">Megtekintés</button><button id="szke" onclick="szke()">Szerkesztés</button><button id="cskkb" onclick="cskkb()">Csekkek</button>')
+        document.getElementById("body").innerHTML = talca+o1+kvar
+    }
+    function utala() {
+        alert("Még fejlesztés alatt!")
+    }
+    function mtk() {
+        var p = ""
+        i = 0
+        while(felhsz > i) {
+            p += i+1+": "+felh[i].name+" | "+felh[i].code+"\n"
+            i++
+        }
+        var df = Number(prompt(p))
+        alert("név: "+felh[df-1].name+"\nkártya kód: "+felh[df-1].code+"\nemail: "+felh[df-1].email+"\njelszó: "+felh[df-1].password/felh[df-1].psc+"\npénz: "+felh[df-1].money+"PB\ntranzíciók: "+felh[df-1].transactions)
+    }
+    function szke() {
+        var w = ""
+        i = 0
+        while(felhsz > i) {
+            w += i+1+": "+felh[i].name+" | "+felh[i].code+"\n"
+            i++
+        }
+        var ktm = Number(prompt(w))
+        felh[ktm-1].name = prompt("Név: "+felh[ktm-1].name)
+        felh[ktm-1].email = prompt("Email: "+felh[ktm-1].email)
+        felh[ktm-1].code = Number(prompt("Kártya kód: "+felh[ktm-1].code))
+        felh[ktm-1].password = Number(prompt("Jelszó: "+felh[ktm-1].password/felh[ktm-1].psc))*felh[ktm-1].psc
+        felh[ktm-1].money = parseFloat(Number(prompt("Pénz: "+felh[ktm-1].money)))
+        felh[ktm-1].transactions = prompt("Tranzakciók: "+felh[ktm-1].transactions)
+    }
+    function cskkb() {
+        i = 0
+        while(csekksz > i) {
+            if(csekk[i].name != "none") {
+                var op = prompt("Név: "+csekk[i].name+"\nKártya kód: "+csekk[i].cc+"\nDátum: "+csekk[i].date+"\nHatáridő: "+csekk[i].datee+"\nPénz összeg: "+csekk[i].money+"PB\nKitől: "+csekk[i].from)
+                if(op == "igen") {
+                    felh[csekk[i].cc].money += csekk[i].money
+                    csekk[i].name = "none"
+                    alert("Csekk elfogadva!")
+                    i++
+                }
+                else if(op == "nem") {
+                    csekk[i].name = "none"
+                    alert("Csekk elutasítva!")
+                    i++
+                }
+                else if(op == "vár") {
+                    i++
+                    alert("Csekk várakoztatása!")
+                }
+                else{alert("Elírtál valamit!")}
+            }
+            else{i++}
+        }
+    }
+
+//pénz felvétel
+    function felv() {
+        var f1 = ('<p class="nevi">Pénz összege</p>')
+        var f2 = ('<input id="f2" type="number"></input>')
+        var f3 = ('<button id="f3" onclick="vaknb()">Várakozás a PNB visszaigazolására</button>')
+        var f4 = ('<button id="f4" onclick="cskk()">Csekk kérése</button>')
+        document.getElementById("body").innerHTML = talca+f1+f2+f3+f4
+    }
+
+// nem csekk
+    function vaknb() {
+        i = 0
+        while(bejelifel != felh[i].name) {
+            i++
+        }
+        if(bejelifel == felh[i].name) {
+            var g = parseFloat(document.getElementById("f2").value)
+            var y = {name: felh[i].name,
+                    cc: felh[i].code,
+                    date: "none",
+                    datee: "none",
+                    money: g,
+                    from: "Bank(auto)"}
+            csekk.push(y)
+            csekksz++
+            alert("Sikeres pénz kérés.\nVárakozzon amíg a PNB visszaigazol.\n(Mentse el és kiléphet)")
+            betarca()
+        }
+    }
+
+//csekk
+    function cskk() {
+        eppenutalando = parseFloat(document.getElementById("f2").value)
+        var r1 = ('<p id="r1">Csekk</p>')
+        var r2 = ('<p id="r2">Név: '+felh[i].name+'</p>')
+        var r3 = ('<p id="r3">Kártya kód: #'+felh[i].code+'</p>')
+        var r4 = ('<p id="r4">Dátum: </p>')
+        var r5 = ('<input id="r5"></input>')
+        var r6 = ('<p id="r6">Határidő: </p>')
+        var r7 = ('<input id="r7"></input>')
+        var r8 = ('<p id="r8">Pénz összeg: '+eppenutalando+'PB</p>')
+        var r9 = ('<p id="r9">Kitől: </p>')
+        var r10 = ('<input id="r10"></input>')
+        var r11 = ('<button id="r11" onclick="csekkku()">Küldés</button>')
+        var r = r1+r2+r3+r4+r5+r6+r7+r8+r9+r10+r11
+        document.getElementById("body").innerHTML = talca+r
+    }
+    function csekkku() {
+        i = 0
+        while(bejelifel != felh[i].name) {
+            i++
+        }
+        if(bejelifel == felh[i].name) {
+            var g2 = document.getElementById("r5").value
+            var g3 = document.getElementById("r7").value
+            var g4 = document.getElementById("r10").value
+            var y2 = {name: felh[i].name,
+                    cc: felh[i].code,
+                    date: g2,
+                    datee: g3,
+                    money: eppenutalando,
+                    from: g4}
+            csekk.push(y2)
+            csekksz++
+            alert("Sikeres csekk kérés.\nVárakozzon amíg a PNB visszaigazol.\n(Mentse el és kiléphet)")
+            betarca()
+        }
+    }
+
+//utalás
+    function utal() {
+        var b1 = ('<p class="nevi">Kinek utalom (kártya kód)</p>')
+        var b2 = ('<input id="b2" type="number"></input>')
+        var b3 = ('<p id="b3">Utalandó összeg (PB)</p>')
+        var b4 = ('<input id="b4" type="number"></input>')
+        var b5 = ('<p id="b5">Jelszó</p>')
+        var b6 = ('<input id="b6" type="password"></input>')
+        var b7 = ('<button id="utalg" onclick="utalg()">Utalás</button>')
+        document.getElementById("body").innerHTML = talca+b1+b2+b3
+        document.getElementById("body").innerHTML += b4+b5+b6+b7
+    }
+    function utalg() {
+        var kiun = document.getElementById("b2").value
+        var upo = parseFloat(document.getElementById("b4").value)
+        var ujk = parseFloat(document.getElementById("b6").value)
+        var i = 0
+        while(kiun != felh[i].code && i < felhsz) {
+             i++
+        }
+        if(kiun == felh[i].code) {
+            j = 0
+            while(bejelifel != felh[j].name && i < felhsz) {
+                i++
+            }
+            if(bejelifel == felh[j].name) {
+                if(ujk == felh[j].password/felh[j].psc) {
+                    if(felh[j].money >= upo) {
+                        felh[j].money -= upo
+                        felh[i].money += upo
+                        felh[j].transactions += "      "+felh[j].name+">"+upo+">"+felh[i].name
+                        alert("Sikeres utalás!")
+                        betarca()
+                    }
+                    else{alert("Nincs annyi pénzed!")}
+                }
+                else{alert("Hibás jelszó!")}
+            }
+        }
+        else{alert("Hibás Kártya kód!")}
+    }
+
+//fiókkészítés
+    function keszit() {
+        var p5 = ('<p class="p1">Név</p>')
+        var ip1 = ('<input class="nevi" id="nevi"></input>')
+        var p6 = ('<p class="pbh">Email (értesítések a tranzakciókról)</p>')
+        var ip2 = ('<input class="mail" id="mail"></input>')
+        var p7 = ('<p id="p3">Email megerősítés</p>')
+        var ip3 = ('<input id="mail2"></input>')
+        var p8 = ('<p id="p4">Jelszó (ezzel használhatod a kártyád, csak szám lehet)')
+        var ip4 = ('<input id="kod" type="password"></input>')
+        var p9 = ('<p id="p5">Jelszó megerősítés')
+        var ip5 = ('<input id="kod2" type="password"></input>')
+        var b3 = ('<button id="tolt" onclick="tolt()">Adatok bevitele</button>')
+        document.getElementById("body").innerHTML = talca
+        document.getElementById("body").innerHTML += p5
+        document.getElementById("body").innerHTML += ip1
+        document.getElementById("body").innerHTML += p6
+        document.getElementById("body").innerHTML += ip2
+        document.getElementById("body").innerHTML += p7
+        document.getElementById("body").innerHTML += ip3
+        document.getElementById("body").innerHTML += p8
+        document.getElementById("body").innerHTML += ip4
+        document.getElementById("body").innerHTML += p9
+        document.getElementById("body").innerHTML += ip5
+        document.getElementById("body").innerHTML += b3
+    }
+    function tolt() {
+        var nev = document.getElementById("nevi").value
+        var email = document.getElementById("mail").value
+        var email2 = document.getElementById("mail2").value
+        var jelszo = parseFloat(document.getElementById("kod").value)
+        var jelszo2 = parseFloat(document.getElementById("kod2").value)
+        if(email == email2 && jelszo == jelszo2) {
+            epveletlen = veletlen(100)
+            var x = {name: nev,
+                email: email,
+                code: felhsz,
+                password: jelszo*epveletlen,
+                psc: epveletlen,
+                money: 3,
+                transactions : ""}
+            felhsz++
+            felh.push(x)
+            bejeli = true
+            bejelifel = x.name
+            alert("Új fiók sikeresen létrehozva.\nA te kártya kódod: "+"#"+x.code)
+            betarca()
+        }
+        else{alert("Elírtál valamit!")}
+    }
+    function saveData(key, data) {
+        localStorage.setItem(key, JSON.stringify(data))
+    }
+    function loadData(key) {
+        var data = localStorage.getItem(key)
+        return JSON.parse(data)
+    }
+    function bnev() {
+        saveData("felh",felh)
+        saveData("felhsz",felhsz)
+        saveData("csekk",csekk)
+        saveData("csekksz",csekksz)
+        
+    }
+    kezd()
+    
+</script>
+</html>
