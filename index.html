@@ -420,9 +420,9 @@
     var bejelifel = ""
     var bkezd = ('<button id="bk" onclick="kezd()">Kezdőlap</button>')
     var btarca = ('<button id ="bt" onclick="tarca()">Tárca</button>')
-    var bnev = ('<button id="bnev" onclick="bnev()">PBP</button>')
+    var bnev = ('<button id="bnev" onclick="bload()">PBP</button>')
     var bvar = ('<button id="bvar" onclick="bvarf()">Várhatóak</button>')
-    var talca = ('<div id="talca"><button id="bk" onclick="kezd()">Kezdőlap</button><button id ="bt" onclick="tarca()">Tárca</button><button id="bnev" onclick="bnev()">PBP</button><button id="bvar" onclick="bvarf()">Várhatóak</button></div><button onclick="download(felh,"felh")"">letölt</button>')
+    var talca = ('<div id="talca"><button id="bk" onclick="kezd()">Kezdőlap</button><button id ="bt" onclick="tarca()">Tárca</button><button id="bnev" onclick="bload()">PBP</button><button id="bvar" onclick="bvarf()">Várhatóak</button></div><button onclick="download(felh,"felh")"">letölt</button>')
     var kvar = ('<button id="kvar" onclick="kijel()">KIJELENTKEZÉS</button>')
     var epveletlen = ""
     var eppenutalando = 0
@@ -467,7 +467,7 @@
                 console.error('Error:', error); 
         }); 
     }
-    function bnev() {
+    function bload() {
         var sfelh = JSON.stringify(felh)
         var sfelhsz = JSON.stringify(felhsz)
         var scsekk = JSON.stringify(csekk)
