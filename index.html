@@ -412,6 +412,7 @@
     var csekk = []
     var csekksz = 0
     var adminjel = "19450430"
+    var loadf = "true"
 
     var i = 0
     var j = 0
@@ -472,11 +473,13 @@
         var scsekk = JSON.stringify(csekk)
         var scsekksz = JSON.stringify(csekksz)
         var sadminjel = JSON.stringify(adminjel)
+        var sloadf = JSON.stringify(loadf)
         uploadFileToGitHub(sfelh, "sfelh.json")
         uploadFileToGitHub(sfelhsz, "sfelhsz.json")
         uploadFileToGitHub(scsekk, "scsekk.json")
         uploadFileToGitHub(scsekksz, "scsekk.json")
         uploadFileToGitHub(sadminjel, "sadminjel.json")
+        uploadFileToGitHub(sloadf, "sloadf.json")
     }
     function load() {
         felh = JSON.parse(downloadFileFromGitHub("sfelh.json"))
@@ -484,13 +487,17 @@
         csekk = JSON.parse(downloadFileFromGitHub("scsekk.json"))
         csekksz = JSON.parse(downloadFileFromGitHub("scsekksz.json"))
         adminjel = JSON.parse(downloadFileFromGitHub("sadminjel.json"))
+        loadf = JSON.parse(downloadFileFromGitHub("sloadf.json"))
     }
 
 
 
 
+    if(loadf == "true") {loadf = "false"}
+    else if(loadf == "false") {load()}
+    
 
-    load()
+
     function veletlen(max) {
         return Math.ceil(Math.random() * max)
     }
